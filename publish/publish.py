@@ -19,9 +19,6 @@ class Publish(commands.Cog):
         """Publish message sent in announcement channel.\n[Refer here](https://github.com/codeinteger6/modmail-plugins/blob/master/publish/README.md) for detailed guidance."""
         await message_id.publish()
         await ctx.send("Published message successfully.")
-        
-    except CommandInvokeError:
-        await ctx.send("An error has occured.")
                                         
 def setup(bot):
     bot.add_cog(Publish(bot))
