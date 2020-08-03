@@ -15,7 +15,7 @@ class Publish(commands.Cog):
 
     @commands.command()
     @checks.has_permissions(PermissionLevel.MODERATOR)
-    async def publish(self, ctx, message_id):
+    async def publish(self, ctx, message_id: int):
         """Publish message sent in announcement channel"""
         msg = fetch_message(message_id)
         await msg.publish()
