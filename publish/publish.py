@@ -1,5 +1,3 @@
-import datetime
-
 import discord
 from discord.ext import commands
 
@@ -11,7 +9,6 @@ class Publish(commands.Cog):
     
     def __init__(self, bot):
         self.bot = bot
-        self.db = bot.plugin_db.get_partition(self)
 
     @commands.command()
     @checks.has_permissions(PermissionLevel.MODERATOR)
