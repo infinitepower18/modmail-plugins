@@ -20,7 +20,7 @@ class Publish(commands.Cog):
         await message_id.publish()
         await ctx.send("Published message successfully.")
         
-    except:
+    except CommandInvokeError:
         await ctx.send("An error has occured.")
                                         
 def setup(bot):
