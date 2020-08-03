@@ -18,7 +18,7 @@ class Publish(commands.Cog):
     async def publish(self, ctx, channel_id, *, message_id):
         """Publish message sent in announcement channel"""
         channel = ctx.guild.get_channel(channel_id)
-        msg = await fetch_message(message_id)
+        msg = await channel.fetch_message(message_id)
         await msg.publish()
         await ctx.send("Published message successfully.")
                                         
